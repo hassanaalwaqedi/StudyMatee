@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الرئيسية - StudyMate</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+  <!-- الشريط العلوي -->
+  <nav class="bg-gray-800 p-4 sticky top-0 z-50">
+    
+   
+    
+
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="index.html" class="text-white font-bold text-xl">StudyMate</a>
+      <ul class="flex space-x-4 space-x-reverse">
+        <li><a href="index.html" class="text-gray-200 hover:text-white">الرئيسية</a></li>
+        <li><a href="universities.html" class="text-gray-200 hover:text-white">الجامعات</a></li>
+        <li><a href="contact.html" class="text-gray-200 hover:text-white">تواصل معنا</a></li>
+        <li><a href="Services.html" class="text-gray-200 hover:text-white">خدمات</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- الترحيب -->
+  <main class="p-6 text-center">
+    <h1 class="text-3xl font-bold mb-4">مرحباً بك في StudyMate</h1>
+    <p class="text-lg">موقعنا يساعد الطلاب على التقديم للجامعات التركية، ويقدم خدمات استشارية وتعليمية باحتراف.</p>
+  </main>
+
+  <!-- عنوان -->
+  <header class="p-6 bg-gray-800 text-center text-3xl font-bold">
+    StudyMate - الرئيسية
+  </header>
+
+  <main class="p-6 max-w-5xl mx-auto">
+     <h2 class="text-2xl font-bold mb-6 text-center">خدماتنا التعليمية</h2>
+    
+
+    <!-- شريط البحث -->
+    <div class="mb-6 text-center">
+      <input type="text" id="searchInput" onkeyup="filterServices()" placeholder="ابحث عن خدمة..." class="w-full md:w-1/2 p-3 rounded bg-gray-700 text-white placeholder-gray-400 text-center">
+    </div>
+
+    <!-- عرض الخدمات -->
+    <div class="grid md:grid-cols-2 gap-6 mb-12">
+      <div class="service-item bg-gray-800 p-4 rounded shadow">
+        <h3 class="text-xl font-bold text-green-400 mb-2">📄 التقديم على الجامعات</h3>
+        <p>نساعدك في التقديم إلى الجامعات التركية وتعبئة الاستمارات الرسمية.</p>
+      </div>
+      <div class="service-item bg-gray-800 p-4 rounded shadow">
+        <h3 class="text-xl font-bold text-yellow-400 mb-2">🌐 الترجمة والتوثيق</h3>
+        <p>نقدم خدمات ترجمة الوثائق الرسمية وتوثيقها حسب متطلبات الجامعات.</p>
+      </div>
+      <div class="service-item bg-gray-800 p-4 rounded shadow">
+        <h3 class="text-xl font-bold text-blue-400 mb-2">🆘 الدعم والإرشاد</h3>
+        <p>إرشاد كامل قبل وبعد القبول، وخدمات استشارية للطلاب الجدد.</p>
+      </div>
+      <div class="service-item bg-gray-800 p-4 rounded shadow">
+        <h3 class="text-xl font-bold text-purple-400 mb-2">🎓 المنح الدراسية</h3>
+        <p>نرشدك للحصول على أفضل المنح الدراسية في الجامعات التركية.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- دعوة لاتخاذ إجراء -->
+  <section class="bg-blue-600 text-white py-12 text-center">
+    <h2 class="text-3xl font-bold mb-4">ابدأ رحلتك الجامعية الآن!</h2>
+    <p class="text-lg mb-6">ساعدنا أكثر من 200 طالب في التقديم بنجاح إلى الجامعات التركية. كن التالي!</p>
+    <a href="contact.html" class="bg-white text-blue-600 px-6 py-3 rounded font-semibold hover:bg-gray-200 transition">احجز استشارتك الآن</a>
+  </section>
+  <button id="themeToggle" class="text-white bg-gray-700 px-3 py-1 rounded hover:bg-gray-600">
+    Toggle Mode
+  </button>
+  
+  <!-- الفوتر -->
+  <footer class="p-4 bg-gray-800 text-center">
+    جميع الحقوق محفوظة © 2025
+  </footer>
+
+  <!-- سكربت البحث -->
+  <script>
+    function filterServices() {
+      const query = document.getElementById("searchInput").value.toLowerCase();
+      const items = document.querySelectorAll(".service-item");
+      items.forEach(item => {
+        item.style.display = item.textContent.toLowerCase().includes(query) ? "" : "none";
+      });
+    }
+  </script>
+
+</body>
+</html>
+

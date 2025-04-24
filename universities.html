@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الجامعات التركية - StudyMate</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .partners-section { text-align: center; }
+    .partners-container { display: flex; flex-wrap: wrap; justify-content: center; }
+    .partner-box {
+      margin: 10px; padding: 15px;
+      border: 3px solid #c181f5;
+      border-radius: 5px;
+      width: 250px;
+      transition: transform 0.2s;
+    }
+    .partner-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .partner-box a { text-decoration: none; color: #ffffff; }
+  </style>
+  <script>
+    function searchUniversities() {
+      const query = document.getElementById("universitySearch").value.toLowerCase();
+      const universities = document.querySelectorAll(".partner-box");
+      universities.forEach(box => {
+        box.style.display = box.textContent.toLowerCase().includes(query) ? "" : "none";
+      });
+    }
+  </script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+  <nav class="bg-gray-800 p-4 sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="index.html" class="text-white font-bold text-xl">StudyMate</a>
+      <ul class="flex space-x-4 space-x-reverse">
+        <li><a href="index.html" class="text-gray-200 hover:text-white">الرئيسية</a></li>
+        <li><a href="universities.html" class="text-gray-200 hover:text-white">الجامعات</a></li>
+        <li><a href="contact.html" class="text-gray-200 hover:text-white">تواصل معنا</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="p-6 text-center">
+    <h1 class="text-3xl font-bold mb-4">قائمة الجامعات التركية</h1>
+
+    <!-- Search Input -->
+    <div class="mb-6 text-center">
+      <input type="text" id="universitySearch" onkeyup="searchUniversities()" placeholder="ابحث عن جامعة..." class="w-full md:w-1/2 p-3 rounded bg-gray-700 text-white placeholder-gray-400 text-center">
+    </div>
+
+    <!-- Example university items (shortened for sample) -->
+    <section class="partners-section">
+      <div class="partners-container">
+        <div class="partner-box"><a href="https://www.boun.edu.tr" target="_blank">1. Boğaziçi University</a></div>
+        <div class="partner-box"><a href="https://www.istanbul.edu.tr" target="_blank">2. Istanbul University</a></div>
+        <div class="partner-box"><a href="https://www.metu.edu.tr" target="_blank">3. Middle East Technical University</a></div>
+        <div class="partner-box"><a href="https://www.ku.edu.tr" target="_blank">4. Koç University</a></div>
+        <div class="partner-box"><a href="https://www.sabanciuniv.edu" target="_blank">5. Sabancı University</a></div>
+        <div class="partner-box"class="searchable"><a href="https://www.boun.edu.tr" target="_blank">1. Boğaziçi University</a></div>
+        <div class="partner-box"class="searchable"><a href="https://www.istanbul.edu.tr" target="_blank">2. Istanbul University</a></div>
+        <div class="partner-box"class="searchable"><a href="https://www.metu.edu.tr" target="_blank">3. Middle East Technical University (METU)</a></div>
+        <div class="partner-box"><a href="https://www.ku.edu.tr" target="_blank">4. Koç University</a></div>
+        <div class="partner-box"><a href="https://www.sabanciuniv.edu" target="_blank">5. Sabancı University</a></div>
+        <div class="partner-box"><a href="https://www.bilkent.edu.tr" target="_blank">6. Bilkent University</a></div>
+        <div class="partner-box"><a href="https://www.hacettepe.edu.tr" target="_blank">7. Hacettepe University</a></div>
+        <div class="partner-box"><a href="https://www.ankara.edu.tr" target="_blank">8. Ankara University</a></div>
+        <div class="partner-box"><a href="https://www.yildiz.edu.tr" target="_blank">9. Yıldız Technical University</a></div>
+        <div class="partner-box"><a href="https://www.itu.edu.tr" target="_blank">10. Istanbul Technical University (ITU)</a></div>
+        <div class="partner-box"><a href="https://www.ege.edu.tr" target="_blank">11. Ege University</a></div>
+        <div class="partner-box"><a href="https://www.deu.edu.tr" target="_blank">12. Dokuz Eylül University</a></div>
+        <div class="partner-box"><a href="https://www.gazi.edu.tr" target="_blank">13. Gazi University</a></div>
+        <div class="partner-box"><a href="https://www.akdeniz.edu.tr" target="_blank">14. Akdeniz University</a></div>
+        <div class="partner-box"><a href="https://www.atauni.edu.tr" target="_blank">15. Atatürk University</a></div>
+        <div class="partner-box"><a href="https://www.marmara.edu.tr" target="_blank">16. Marmara University</a></div>
+        <div class="partner-box"><a href="https://www.uludag.edu.tr" target="_blank">17. Uludağ University</a></div>
+        <div class="partner-box"><a href="https://www.cu.edu.tr" target="_blank">18. Çukurova University</a></div>
+        <div class="partner-box"><a href="https://www.anadolu.edu.tr" target="_blank">19. Anadolu University</a></div>
+        <div class="partner-box"><a href="https://www.erciyes.edu.tr" target="_blank">20. Erciyes University</a></div>
+        <div class="partner-box"><a href="https://www.ktu.edu.tr" target="_blank">21. Karadeniz Technical University</a></div>
+        <div class="partner-box"><a href="https://www.selcuk.edu.tr" target="_blank">22. Selçuk University</a></div>
+        <div class="partner-box"><a href="https://www.pau.edu.tr" target="_blank">23. Pamukkale University</a></div>
+        <div class="partner-box"><a href="https://www.iyte.edu.tr" target="_blank">24. İzmir Institute of Technology</a></div>
+        <div class="partner-box"><a href="https://www.etu.edu.tr" target="_blank">25. TOBB University of Economics and Technology</a></div>
+        <div class="partner-box"><a href="https://www.okan.edu.tr" target="_blank">26. Okan University</a></div>
+        <div class="partner-box"><a href="https://www.bahcesehir.edu.tr" target="_blank">27. Bahçeşehir University</a></div>
+        <div class="partner-box"><a href="https://www.ozyegin.edu.tr" target="_blank">28. Özyeğin University</a></div>
+        <div class="partner-box"><a href="https://www.bilgi.edu.tr" target="_blank">29. İstanbul Bilgi University</a></div>
+        <div class="partner-box"><a href="https://www.khas.edu.tr" target="_blank">30. Kadir Has University</a></div>
+        <div class="partner-box"><a href="https://www.beykent.edu.tr" target="_blank">31. Beykent University</a></div>
+        <div class="partner-box"><a href="https://www.maltepe.edu.tr" target="_blank">32. Maltepe University</a></div>
+        <div class="partner-box"><a href="https://www.yeditepe.edu.tr" target="_blank">33. Yeditepe University</a></div>
+        <div class="partner-box"><a href="https://www.aydin.edu.tr" target="_blank">34. Istanbul Aydın University</a></div>
+        <div class="partner-box"><a href="https://www.altinbas.edu.tr" target="_blank">35. Altınbaş University</a></div>
+        <div class="partner-box"><a href="https://www.medipol.edu.tr" target="_blank">36. Istanbul Medipol University</a></div>
+        <div class="partner-box"><a href="https://www.nisantasi.edu.tr" target="_blank">37. Nişantaşı University</a></div>
+        <div class="partner-box"><a href="https://www.arel.edu.tr" target="_blank">38. Istanbul Arel University</a></div>
+        <div class="partner-box"><a href="https://www.kultur.edu.tr" target="_blank">39. Istanbul Kültür University</a></div>
+        <div class="partner-box"><a href="https://www.sabahattinzaim.edu.tr" target="_blank">40. Istanbul Sabahattin Zaim University</a></div>
+        <div class="partner-box"><a href="https://www.baskent.edu.tr" target="_blank">41. Başkent University</a></div>
+        <div class="partner-box"><a href="https://www.fsm.edu.tr" target="_blank">42. Fatih Sultan Mehmet Vakıf University</a></div>
+        <div class="partner-box"><a href="https://www.msgsu.edu.tr" target="_blank">43. Mimar Sinan Fine Arts University</a></div>
+        <div class="partner-box"><a href="https://www.beun.edu.tr" target="_blank">44. Zonguldak Bülent Ecevit University</a></div>
+        <div class="partner-box"><a href="https://www.aksaray.edu.tr" target="_blank">45. Aksaray University</a></div>
+        <div class="partner-box"><a href="https://www.gantep.edu.tr" target="_blank">46. Gaziantep University</a></div>
+        <div class="partner-box"><a href="https://www.harran.edu.tr" target="_blank">47. Harran University</a></div>
+        <div class="partner-box"><a href="https://www.mu.edu.tr" target="_blank">48. Muğla Sıtkı Koçman University</a></div>
+        <div class="partner-box"><a href="https://www.kocaeli.edu.tr" target="_blank">49. Kocaeli University</a></div>
+        <div class="partner-box"><a href="https://www.sdu.edu.tr" target="_blank">50. Süleyman Demirel University</a></div>
+    </div>
+</section>
+<!-- Partners Section with Tuition Fees -->
+<section id="partners" class="section partners-section"class="searchable">
+    <h2>Our public Partner Universities</h2>
+    <h2>جامعاتنا الشريكة الحكومية</h2>
+    <p>We are proud to collaborate with 50 top universities in Turkey, offering excellent academic opportunities for students worldwide. Click on the links to view tuition fees and other details.</p>
+    <p>نحن فخورون بالتعاون مع 50 جامعة رائدة في تركيا، حيث نقدم فرصًا أكاديمية ممتازة للطلاب في جميع أنحاء العالم. انقر على الروابط لعرض الرسوم الدراسية والتفاصيل الأخرى</p>
+    
+   <div class="partners-container">
+        <div class="partner-box">
+            <a href="https://www.boun.edu.tr" target="_blank">1. Boğaziçi University</a> - 
+            <a href="https://www.boun.edu.tr/en-EN/Page/Admission" target="_blank">Tuition Fees</a>
+        </div>
+        <div class="partner-box">
+            <a href="https://www.istanbul.edu.tr" target="_blank">2. Istanbul University</a> - 
+            <a href="https://www.istanbul.edu.tr/en/_Tuition-Fees" target="_blank">Tuition Fees</a>
+        </div>
+        <div class="partner-box">
+            <a href="https://www.metu.edu.tr" target="_blank">3. Middle East Technical University (METU)</a> - 
+            <a href="https://www.metu.edu.tr/admission-fees" target="_blank">Tuition Fees</a>
+        </div>
+        <div class="partner-box">
+            <a href="https://www.ku.edu.tr" target="_blank">4. Koç University</a> - 
+            <a href="https://international.ku.edu.tr/tuition-fees/" target="_blank">Tuition Fees</a>
+        </div>
+        <div class="partner-box">
+            <a href="https://www.sabanciuniv.edu" target="_blank">5. Sabancı University</a> - 
+            <a href="https://www.sabanciuniv.edu/en/tuition-fees" target="_blank">Tuition Fees</a>
+        </div>
+        <div class="partner-box">
+            <a href="https://www.bilkent.edu.tr" target="_blank">6. Bilkent University</a> - 
+            <a href="https://w3.bilkent.edu.tr/bilkent/admissions/tuition-fees/" target="_blank">Tuition Fees</a>
+        </div>
+        <div class="partner-box">
+            <a href="https://www.hacettepe.edu.tr" target="_blank">7. Hacettepe University</a> - 
+            <a href="https://www.hacettepe.edu.tr/fees" target="_blank">Tuition Fees</a>
+        </div>
+        <div class="partner-box">
+            <a href="https://www.ankara.edu.tr" target="_blank">8. Ankara University</a> - 
+            <a href="https://www.ankara.edu.tr/admissions/fees" target="_blank">Tuition Fees</a>
+        </div>
+        <div class="partner-box">
+            <a href="https://www.yildiz.edu.tr" target="_blank">9. Yıldız Technical University</a> - 
+            <a href="https://www.yildiz.edu.tr/tuition" target="_blank">Tuition Fees</a>
+        </div>
+        <div class="partner-box">
+            <a href="https://www.itu.edu.tr" target="_blank">10. Istanbul Technical University (ITU)</a> - 
+            <a href="https://www.itu.edu.tr/en/education/tuition-fees" target="_blank">Tuition Fees</a>
+        </div>
+        <!-- Add similar entries for the remaining universities -->
+
+        <section id="partners" class="section partners-section"class="searchable">
+            <h2>Our private Partner Universities</h2>
+            <h2>جامعاتنا الشريكة الخاصة</h2>
+            <p>نحن فخورون بالتعاون مع 50 من أفضل الجامعات الخاصة في تركيا، حيث نقدم فرصًا أكاديمية ممتازة للطلاب في جميع أنحاء العالم. انقر على الروابط لعرض الرسوم الدراسية والتفاصيل الأخرى</p>
+            <div class="partners-container"class="searchable" >
+                <div class="partner-box"class="searchable">
+                    <a href="https://www.acibadem.edu.tr" target="_blank">1. Acıbadem Mehmet Ali Aydınlar University</a> - 
+                    <a href="https://www.acibadem.edu.tr/en/prospective-students/tuition-fees" target="_blank">Tuition Fees</a>
+                </div>
+                <div class="partner-box">
+                    <a href="https://www.altinbas.edu.tr" target="_blank">2. Altınbaş University</a> - 
+                    <a href="https://www.altinbas.edu.tr/en/admissions/tuition-fees" target="_blank">Tuition Fees</a>
+                </div>
+                <div class="partner-box">
+                    <a href="https://www.antalya.edu.tr" target="_blank">3. Antalya Bilim University</a> - 
+                    <a href="https://www.antalya.edu.tr/en/admissions/tuition-fees" target="_blank">Tuition Fees</a>
+                </div>
+                <div class="partner-box">
+                    <a href="https://www.atilim.edu.tr" target="_blank">4. Atılım University</a> - 
+                    <a href="https://www.atilim.edu.tr/en/admissions/page/tuition-fees" target="_blank">Tuition Fees</a>
+                </div>
+                <div class="partner-box">
+                    <a href="https://www.bahcesehir.edu.tr" target="_blank">5. Bahçeşehir University</a> - 
+                    <a href="https://bau.edu.tr/content/10848-tuition-fees" target="_blank">Tuition Fees</a>
+                </div>
+                <div class="partner-box">
+                    <a href="https://www.baskent.edu.tr" target="_blank">6. Başkent University</a> - 
+                    <a href="https://www.baskent.edu.tr/english/tuition_fees" target="_blank">Tuition Fees</a>
+                </div>
+                <div class="partner-box">
+                    <a href="https://www.beykent.edu.tr" target="_blank">7. Beykent University</a> - 
+                    <a href="https://www.beykent.edu.tr/en/student/tuition-fees" target="_blank">Tuition Fees</a>
+                </div>
+                <div class="partner-box">
+                    <a href="https://www.bilgi.edu.tr" target="_blank">8. Istanbul Bilgi University</a> - 
+                    <a href="https://www.bilgi.edu.tr/en/prospective-students/tuition-fees/" target="_blank">Tuition Fees</a>
+                </div>
+                <div class="partner-box">
+                    <a href="https://www.bilkent.edu.tr" target="_blank">9. Bilkent University</a> - 
+                    <a href="https://w3.bilkent.edu.tr/bilkent/admissions/tuition-fees/" target="_blank">Tuition Fees</a>
+                </div>
+                <div class="partner-box">
+                    <a href="https://www.cankaya.edu.tr" target="_blank">10. Çankaya University</a> - 
+                    <a href="https://www.cankaya.edu.tr/en/admissions/tuition-fees/" target="_blank">Tuition Fees</a>
+                </div>
+                <div class="partner-box">
+                    <a href="https://www.dogus.edu.tr" target="_blank">11. Doğuş University</a> - 
+                    <a href="https://www.dogus.edu.tr/en/prospective-students/tuition-fees" target="_blank">Tuition Fees</a>
+                </div>
+                <div class="partner-box">
+                    <a href="https://www.fsm.edu.tr" target="_blank">12. Fatih Sultan Mehmet Vakıf University</a> - 
+                    <a href="https://www.fsm.edu.tr/en/International-Students/Tuition-Fees" target="_blank">Tuition Fees</a>
+                </div>
+                
+                    
+                        
+                        <div class="partner-box">
+                            <a href="https://www.kadirhas.edu.tr/en" target="_blank">Kadir Has University</a>
+                        </div>
+                        <div class="partner-box">
+                            <a href="https://www.yeditepe.edu.tr/en" target="_blank">Yeditepe University</a>
+                        </div>
+                        <div class="partner-box">
+                            <a href="https://www.ku.edu.tr/en" target="_blank">Koç University</a>
+                        </div>
+                        <div class="partner-box">
+                            <a href="https://www.bilkent.edu.tr/en" target="_blank">Bilkent University</a>
+                        </div>
+                        <div class="partner-box">
+                            <a href="https://www.istinye.edu.tr/en" target="_blank">İstinye University</a>
+                        </div>
+                        <div class="partner-box">
+                            <a href="https://www.sabanciuniv.edu/en" target="_blank">Sabancı University</a>
+                        </div>
+                        <div class="partner-box">
+                            <a href="https://www.hacettepe.edu.tr/en" target="_blank">Hacettepe University</a>
+                        </div>
+                        <div class="partner-box">
+                            <a href="https://www.acibadem.edu.tr/en" target="_blank">Acıbadem University</a>
+                        </div>
+                        <div class="partner-box">
+                            <a href="https://www.medipol.edu.tr/en" target="_blank">Medipol University</a>
+                        </div>
+                        <div class="partner-box">
+                            <a href="https://www.ankara.edu.tr/en" target="_blank">Ankara University</a>
+                        </div>
+                        <div class="partner-box">
+                            <a href="https://www.bahcesehir.edu.tr/en" target="_blank">Bahçeşehir University</a>
+                        </div>
+                        <div class="partner-box">
+                            <a href="https://www.galatasaray.edu.tr/en" target="_blank">Galatasaray University</a>
+                        </div>
+                        <div class="partner-box">
+                            <a href="https://www.marmara.edu.tr/en" target="_blank">Marmara University</a>
+                        </div>
+                        <div class="partner-box">
+                            <a href="https://www.isik.edu.tr/en" target="_blank">Işık University</a>
+                        </div>
+                        <div class="partner-box">
+                            <a href="https://www.mehmetakif.edu.tr/en" target="_blank">Mehmet Akif Ersoy University</a>
+                        </div>
+                        <div class="partner-box">
+                            <a href="https://www.istanbul.edu.tr/en" target="_blank">Istanbul University</a>
+                        </div>
+        <!-- Add more universities here -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="p-4 mt-8 bg-gray-800 text-center">جميع الحقوق محفوظة © 2025</footer>
+
+</body>
+</html>
+
